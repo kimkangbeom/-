@@ -456,7 +456,7 @@ async def task():
 			if voice_client1.is_connected() :
 				await dbLoad()
 				await client.get_channel(channel).send( '< 다시 왔습니다! >', tts=False)
-				print("명치복구완료!")
+				print("복구완료!")
 
 	while not client.is_closed():
 		############ 워닝잡자! ############
@@ -1403,9 +1403,9 @@ while True:
 		global bossMungFlag
 
 		if ctx.message.channel.id == basicSetting[7]:
-			await ctx.send( '< 보탐봇 명치 맞고 숨 고르기 중! 잠시만요! >', tts=False)
+			await ctx.send( '< 보탐봇 점검 및 재접중 입니다! >', tts=False)
 			await dbSave()
-			print("명치!")
+			print("점검재접!")
 			await voice_client1.disconnect()
 			#client.clear()
 			raise SystemExit
